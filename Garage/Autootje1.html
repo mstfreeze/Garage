@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body background="./verkeer/kruising.png">
+<form>
+<h1>autootje1.html</h1>
+<p>een trapautootje laten rijden</p>
+<p>druk op de knop om een stukje te rijden</p>
+<input type="button" value="start" onclick="starten()">
+<input type="button" value="opnieuw" onclick="opnieuw()">
+<img id="auto" src="./verkeer/autogroen.png" width="40px" height="80px">
+</form>
+<script>
+var auto = document.getElementById('auto'); // object auto gekoppeld aan plaatje
+auto.style.position = 'absolute';
+auto.style.left = '650px';
+auto.style.top = '800px';
+function starten() {
+auto.style.top = parseInt(auto.style.top) - 5 + 'px' ;
+}
+function opnieuw() {
+auto.style.top = '800px';
+}
+</script>
+</body>
+</html>
